@@ -7,21 +7,30 @@
         mc:Ignorable="d"
        Title="MainWindow" Loaded = "Window_Loaded" Width ="600" MaxWidth ="600" MinHeight ="300" MinWidth ="600">
     <Grid>
-        <DataGrid  x:Name = "EmpDataGrid" HorizontalAlignment="Left" Height="438" Margin="10,0,0,0" VerticalAlignment="Top" Width="338"
-                 Grid.ColumnSpan = "3"  AutoGenerateColumns = "False"
-                   EnableRowVirtualization = "True" 
-                   ItemsSource = "{Binding}"
-                   IsReadOnly = "True"
-            <DataGrid.Columns>
-            <DataGridTextColumn x:Name = "idColumn" Binding = "{Binding Id}" Header = "Id" IsReadOnly = "True" Width = "Auto" />
-            <DataGridTextColumn x:Name = "fIOColumn" Binding = "{Binding FIO}" Header = "ФИО" Width = "Auto" />
-            <DataGridTextColumn x:Name = "birthdayColumn" Binding = "{Binding Birthday}" Header = "День рождения" Width = "Auto" />
-            <DataGridTextColumn x:Name = "emailColumn" Binding = "{Binding Email}" Header = "Email" Width = "Auto" />
-            <DataGridTextColumn x:Name = "phoneColumn" Binding = "{Binding Phone}" Header = "Телефон" Width = "Auto" />
-            </DataGrid.Columns>
-            />
-        
+        <DataGrid  x:Name = "EmpDataGrid" HorizontalAlignment="Left" Height="438" Margin="10,0,0,0" 
+                   VerticalAlignment="Top" Width="338"/>
+
         <DataGrid HorizontalAlignment="Left" Height="428" Margin="353,10,0,0" VerticalAlignment="Top" Width="229" RenderTransformOrigin="0.874,0.494"/>
+        <ListView x:Name="ListViewEmp"  
+                  HorizontalAlignment="Left" Height="428" 
+                  Margin="10,10,0,0" VerticalAlignment="Top" 
+                  Width="331">
+            <ListView.View>
+                <GridView/>
+                <GridViewColumn Header = "Id" Width = "120" DisplayMemberBinding = "{Binding Id}"/>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="ListViewDepartments" 
+                  HorizontalAlignment="Left" Height="428" 
+                  Margin="353,10,0,0" VerticalAlignment="Top" 
+                  Width="229">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn x:Name="GridViewColumnId" Header = "IdDep" Width = "120" DisplayMemberBinding = "{Binding Id}"/>
+                    <GridViewColumn x:Name="GridViewColumnName" Header = "Name" Width = "120" DisplayMemberBinding = "{Binding Name}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
     </Grid>
 </Window>
