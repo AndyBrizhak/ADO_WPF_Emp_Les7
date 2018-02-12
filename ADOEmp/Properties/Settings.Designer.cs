@@ -26,8 +26,8 @@ namespace ADOEmp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ADOEmp;Integrated Security=Tru" +
-            "e;Pooling=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Employee;Integrated Security=T" +
+            "rue;Pooling=False")]
         public string ADOEmpConnectionString {
             get {
                 return ((string)(this["ADOEmpConnectionString"]));
