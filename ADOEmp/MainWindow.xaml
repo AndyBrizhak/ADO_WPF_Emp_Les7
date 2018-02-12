@@ -41,7 +41,7 @@
         <Button x:Name="addButtonEmp" Content="Add Emp" HorizontalAlignment="Left" Height="35" Margin="20,448,0,-42" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="updateButtonEmp" Content="Update Emp" HorizontalAlignment="Left" Height="35" Margin="143,448,0,-42" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.347,0.543"/>
         <Button x:Name="deleteButtonEmp" Content="Delete Emp" HorizontalAlignment="Left" Height="35" Margin="257,448,0,-42" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="addButtonDep" Content="Add Dep" HorizontalAlignment="Left" Height="34" Margin="363,449,0,-42" VerticalAlignment="Top" Width="67"/>
+        <Button x:Name="addButtonDep" Content="Add Dep" HorizontalAlignment="Left" Height="34" Margin="363,449,0,-42" VerticalAlignment="Top" Width="67" Click="addButtonDep_Click"/>
         <Button x:Name="updateButtonDep" Content="Update Dep" HorizontalAlignment="Left" Height="34" Margin="435,449,0,-42" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.436,0.441"/>
         <Button x:Name="deleteButtonDep" Content="Delete Dep" HorizontalAlignment="Left" Height="34" Margin="507,449,0,-42" VerticalAlignment="Top" Width="65"/>
 
