@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Data;
+
 
 namespace ADOEmp
 {
@@ -18,9 +10,20 @@ namespace ADOEmp
     /// </summary>
     public partial class EditWindEmp : Window
     {
-        public EditWindEmp()
+        public DataRow resultRow { get; set; }
+
+        public EditWindEmp(DataRow dataRow)
         {
             InitializeComponent();
+            resultRow = dataRow;
         }
+
+        //private void Window_Loaded(object sender, RoutedEventArgs e)
+        //{
+        //    nameDepTextBox.Text = resultRow["FIO"].ToString();
+        //    birthdayTextBox.Text = resultRow["Birthday"].ToString();
+        //    emailTextBox.Text = resultRow["Email"].ToString();
+        //    phoneTextBox.Text = resultRow["Phone"].ToString();
+        //}
     }
 }

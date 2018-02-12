@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Data;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+
 
 namespace ADOEmp
 {
@@ -18,9 +9,28 @@ namespace ADOEmp
     /// </summary>
     public partial class EditWindDep : Window
     {
-        public EditWindDep()
+        public DataRow resultRow { get; set; }
+
+        public EditWindDep(DataRow dataRow)
         {
             InitializeComponent();
+            resultRow = dataRow;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            nameDepTextBox.Text = resultRow["Name"].ToString();
+        }
+
+        private void saveButtonDep_Click(object sender, RoutedEventArgs e)
+        {
+            resultRow["Name"] = nameDepTextBox.Text;
+            DialogResult = true;
+        }
+
+        private void cancelButtonDep_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
     }
 }

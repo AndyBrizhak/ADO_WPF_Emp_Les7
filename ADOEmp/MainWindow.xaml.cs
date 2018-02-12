@@ -40,6 +40,12 @@ namespace ADOEmp
             // добавим новую строку
             DataRow newRow = dtDep.NewRow();
             EditWindDep editWindow = new EditWindDep(newRow);
+            editWindow.ShowDialog();
+            if (editWindow.DialogResult.HasValue && editWindow.DialogResult.Value)
+            {
+                dtDep.Rows.Add(editWindow.resultRow);
+                adapter.Update(dtDep);
+            }
         }
     }
 }
