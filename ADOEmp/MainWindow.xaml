@@ -6,31 +6,44 @@
         xmlns:local="clr-namespace:ADOEmp"
         mc:Ignorable="d"
        Title="MainWindow" Loaded = "Window_Loaded" Width ="600" MaxWidth ="600" MinHeight ="300" MinWidth ="600">
-    <Grid>
-        <DataGrid  x:Name = "EmpDataGrid" HorizontalAlignment="Left" Height="438" Margin="10,0,0,0" 
+    <Grid Margin="0,0,-8,63">
+        <DataGrid  x:Name = "EmpDataGrid" HorizontalAlignment="Left" Height="495" Margin="10,0,0,-54" 
                    VerticalAlignment="Top" Width="338"/>
 
-        <DataGrid HorizontalAlignment="Left" Height="428" Margin="353,10,0,0" VerticalAlignment="Top" Width="229" RenderTransformOrigin="0.874,0.494"/>
+        <DataGrid x:Name="DepDataGrid" HorizontalAlignment="Left" Height="495" Margin="353,0,0,-54" VerticalAlignment="Top" Width="229" RenderTransformOrigin="0.874,0.494"/>
         <ListView x:Name="ListViewEmp"  
-                  HorizontalAlignment="Left" Height="428" 
-                  Margin="10,10,0,0" VerticalAlignment="Top" 
+                  HorizontalAlignment="Left" Height="387" 
+                  Margin="10,51,0,0" VerticalAlignment="Top" 
                   Width="331">
             <ListView.View>
-                <GridView/>
-                <GridViewColumn Header = "Id" Width = "120" DisplayMemberBinding = "{Binding Id}"/>
+                <GridView>
+                    <GridViewColumn Header = "Id" Width = "50" DisplayMemberBinding = "{Binding Id}"/>
+                    <GridViewColumn Header = "Name" Width = "110" DisplayMemberBinding = "{Binding Name}"/>
+                    <GridViewColumn Header = "IdDep" Width = "50" DisplayMemberBinding = "{Binding IdDep}"/>
+                    <GridViewColumn Header = "NameDep" Width = "120" DisplayMemberBinding = "{Binding NameDep}"/>
+                </GridView>
+
             </ListView.View>
         </ListView>
         <ListView x:Name="ListViewDepartments" 
-                  HorizontalAlignment="Left" Height="428" 
-                  Margin="353,10,0,0" VerticalAlignment="Top" 
+                  HorizontalAlignment="Left" Height="387" 
+                  Margin="353,51,0,0" VerticalAlignment="Top" 
                   Width="229">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="GridViewColumnId" Header = "IdDep" Width = "120" DisplayMemberBinding = "{Binding Id}"/>
-                    <GridViewColumn x:Name="GridViewColumnName" Header = "Name" Width = "120" DisplayMemberBinding = "{Binding Name}"/>
+                    <GridViewColumn x:Name="GridViewColumnId" Header = "IdDep" Width = "50" DisplayMemberBinding = "{Binding Id}"/>
+                    <GridViewColumn x:Name="GridViewColumnName" Header = "Name" Width = "180" DisplayMemberBinding = "{Binding Name}"/>
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label Content="Employees" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="331"/>
+        <Label Content="Departments" HorizontalAlignment="Left" Margin="353,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,-0.346" Width="229"/>
+        <Button x:Name="addButtonEmp" Content="Add Emp" HorizontalAlignment="Left" Height="35" Margin="20,448,0,-42" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="updateButtonEmp" Content="Update Emp" HorizontalAlignment="Left" Height="35" Margin="143,448,0,-42" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.347,0.543"/>
+        <Button x:Name="deleteButtonEmp" Content="Delete Emp" HorizontalAlignment="Left" Height="35" Margin="257,448,0,-42" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="addButtonDep" Content="Add Dep" HorizontalAlignment="Left" Height="34" Margin="363,449,0,-42" VerticalAlignment="Top" Width="67"/>
+        <Button x:Name="updateButtonDep" Content="Update Dep" HorizontalAlignment="Left" Height="34" Margin="435,449,0,-42" VerticalAlignment="Top" Width="67" RenderTransformOrigin="0.436,0.441"/>
+        <Button x:Name="deleteButtonDep" Content="Delete Dep" HorizontalAlignment="Left" Height="34" Margin="507,449,0,-42" VerticalAlignment="Top" Width="65"/>
 
     </Grid>
 </Window>
