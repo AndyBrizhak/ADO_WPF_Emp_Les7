@@ -55,7 +55,7 @@ namespace ADOEmp
 
         private void addButtonDep_Click(object sender, RoutedEventArgs e)
         {
-            // добавим новую строку
+            
             DataRow newRow = dtDep.NewRow();
             EditWindDep editWindow = new EditWindDep(newRow);
             editWindow.ShowDialog();
